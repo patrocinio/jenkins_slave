@@ -10,6 +10,8 @@ RUN add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubunt
 RUN apt-get update
 RUN apt-get install -y docker-ce
 
+CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
+
 
 
 
